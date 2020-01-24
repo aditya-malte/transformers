@@ -1028,6 +1028,8 @@ class BertForMaskedLM(BertPreTrainedModel):
 
         return outputs  # (masked_lm_loss), (ltr_lm_loss), prediction_scores, (hidden_states), (attentions)
 
+"""
+COMMENTED as we want to disable NextSentencePrediction Module
 
 @add_start_docstrings(
     """Bert Model with a `next sentence prediction (classification)` head on top. """, BERT_START_DOCSTRING,
@@ -1112,7 +1114,7 @@ class BertForNextSentencePrediction(BertPreTrainedModel):
             outputs = (next_sentence_loss,) + outputs
 
         return outputs  # (next_sentence_loss), seq_relationship_score, (hidden_states), (attentions)
-
+"""
 
 @add_start_docstrings(
     """Bert Model transformer with a sequence classification/regression head on top (a linear layer on top of
